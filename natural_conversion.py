@@ -1,4 +1,6 @@
 def better_int(digit: str) -> int:
+    if not digit.isalnum():
+        raise ValueError(f"{digit} cannot be converted to integer")
     try:
         return int(digit)
     except ValueError:
