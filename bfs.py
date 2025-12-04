@@ -1,6 +1,8 @@
 from queue import Queue
 from typing import Optional
 
+type Graph = dict[int, list[int]]
+
 
 def edges_to_nodes(edges: list[tuple[int, int]]) -> dict[int, list[int]]:
     nodes: dict[int, list[int]] = {}
@@ -39,4 +41,4 @@ def bfs(nodes: dict[int, list[int]], start_node: Optional[int]=0, end_node: Opti
 
 
 if __name__ == "__main__":
-    print(bfs(edges_to_nodes([(0,1),(0,2),(0,3),(1,3),(2,4),(3,4),(3,5),(2,3)])))
+    print(edges_to_nodes([(0,1),(0,2),(0,3),(1,3),(2,4),(3,4),(3,5),(2,3)]))
