@@ -5,9 +5,8 @@ from bfs import edges_to_nodes, Graph
 
 def is_graph_coherent(nodes_with_adjacency: Graph) -> bool:
     nodes = nodes_with_adjacency.keys()
-    for node in nodes:
-        if possible_destinations(node, nodes_with_adjacency) != nodes:
-            return False
+    if possible_destinations(min(nodes), nodes_with_adjacency) != nodes:
+        return False
 
     return True
 
